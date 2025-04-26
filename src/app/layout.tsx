@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
+import UserProvider from '@/context/userContext'
 import Header from '@/components/Header'
+import Footer from "@/components/Footer";
 
 import './global.scss'
 
@@ -17,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <UserProvider>
+          <Header />
+          {children}
+          <Footer />
+        </UserProvider>
       </body>
     </html>
   );
