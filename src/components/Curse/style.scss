@@ -1,0 +1,42 @@
+.curse_container {
+  padding: 60px 5%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .curse_heading {
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  .curse_description {
+    font-size: 23px;
+    margin: 50px 0;
+  }
+
+  .price_area {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .price {
+      .value {
+        font-size: 40px;
+        font-weight: bold;
+
+      }
+      .date {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .price_btn {
+    a {
+      font-size: 22px;
+      padding: 15px 20px;
+    }
+  }
+}

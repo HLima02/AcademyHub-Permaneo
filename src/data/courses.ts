@@ -12,7 +12,8 @@ export const cursos: CurseProps[] = [
     price: 49.99,
     created_at: "2023-01-15",
     ico: python,
-    url: '/introducao_programacao_python'
+    url: '/introducao_programacao_python',
+    purchased: false
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const cursos: CurseProps[] = [
     price: 69.99,
     created_at: "2023-02-10",
     ico: react,
-    url: '/desenvolvimento_web_react'
+    url: '/desenvolvimento_web_react',
+    purchased: false
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ export const cursos: CurseProps[] = [
     price: 59.99,
     created_at: "2023-03-05",
     ico: javascrit,
-    url: '/javascript_avancado'
+    url: '/javascript_avancado',
+    purchased: false
   },
   {
     id: 4,
@@ -39,7 +42,8 @@ export const cursos: CurseProps[] = [
     price: 79.99,
     created_at: "2023-03-20",
     ico: react,
-    url: '/desenvolvimento_mobile_react_native'
+    url: '/desenvolvimento_mobile_react_native',
+    purchased: false
   },
   {
     id: 5,
@@ -48,7 +52,8 @@ export const cursos: CurseProps[] = [
     price: 39.99,
     created_at: "2023-04-01",
     ico: sql,
-    url: '/banco_de_dados_sql'
+    url: '/banco_de_dados_sql',
+    purchased: false
   },
   {
     id: 6,
@@ -57,7 +62,8 @@ export const cursos: CurseProps[] = [
     price: 89.99,
     created_at: "2023-04-15",
     ico: python,
-    url: '/devops_para_desenvolvedores'
+    url: '/devops_para_desenvolvedores',
+    purchased: false
   },
   {
     id: 7,
@@ -66,7 +72,8 @@ export const cursos: CurseProps[] = [
     price: 54.99,
     created_at: "2023-05-10",
     ico: javascrit,
-    url: '/desenvolvimento_apis_com_nodejs'
+    url: '/desenvolvimento_apis_com_nodejs',
+    purchased: false
   },
   {
     id: 8,
@@ -75,7 +82,8 @@ export const cursos: CurseProps[] = [
     price: 74.99,
     created_at: "2023-05-25",
     ico: python,
-    url: '/ciberseguranca_para_desenvolvedore'
+    url: '/ciberseguranca_para_desenvolvedore',
+    purchased: false
   },
   {
     id: 9,
@@ -84,7 +92,8 @@ export const cursos: CurseProps[] = [
     price: 99.99,
     created_at: "2023-06-05",
     ico: python,
-    url: '/desenvolvimento_jogos_unity'
+    url: '/desenvolvimento_jogos_unity',
+    purchased: false
   },
   {
     id: 10,
@@ -93,7 +102,8 @@ export const cursos: CurseProps[] = [
     price: 109.99,
     created_at: "2023-06-20",
     ico: python,
-    url: '/machine_learning_python'
+    url: '/machine_learning_python',
+    purchased: false
   }
 ]
 

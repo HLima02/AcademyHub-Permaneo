@@ -1,4 +1,5 @@
 import React from 'react'
+import Curse from '@/components/Curse'
 
 type CursePageProps = {
   params: {
@@ -11,7 +12,8 @@ export default function CursePage({ params }:CursePageProps ) {
   console.log(name)
   return (
     <div>
-      <h1>Página inicial do curso</h1>
+
+      <Curse url={`/${name}`} />
     </div>
   )
 }

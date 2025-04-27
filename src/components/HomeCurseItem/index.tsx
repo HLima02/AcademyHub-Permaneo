@@ -23,7 +23,7 @@ export default function HomeCurseItem({title, description, ico, url}:HomeCurseIt
         <p>{ title }</p>
       </span>
       <p className='description'>{ description }</p>
-      <Link href={`/curso/${url}`}>Acessar Curso</Link>
+      <Link className='purple_btn' href={`/curso/${url}`}>Acessar Curso</Link>
     </div>
   )
 }
