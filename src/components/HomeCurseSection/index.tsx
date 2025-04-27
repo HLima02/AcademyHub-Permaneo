@@ -9,13 +9,18 @@ export default function HomeCurseSection() {
   if(!context) return
   const { courseList } = context
 
-  console.log(courseList)
   return (
     <div className='Home_curses_container'>
       <h2>Nossos cursos</h2>
       <div className='card_section'>
         {courseList.map(item => (
-          <HomeCurseItem key={item.id} title={item.title} description={item.description} ico={item.ico} url={item.url} />
+          <HomeCurseItem 
+          key={item.id} 
+          title={item.title} 
+          description={item.description} 
+          ico={item.ico} 
+          url={item.url}
+          purchased={item.purchased} />
         )) }
       </div>
     </div>

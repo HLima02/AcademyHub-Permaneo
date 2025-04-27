@@ -10,12 +10,14 @@ type HomeCurseItemProps = {
   title: String
   description: string
   ico: StaticImageData,
-  url: string
+  url: string,
+  purchased?: boolean
 }
 
 import './style.scss'
 
-export default function HomeCurseItem({title, description, ico, url}:HomeCurseItemProps) {
+export default function HomeCurseItem({title, description, ico, url, purchased}:HomeCurseItemProps) {
+
   return (
     <div className='curse_card'>
       <span className='card_title'>
@@ -23,7 +25,13 @@ export default function HomeCurseItem({title, description, ico, url}:HomeCurseIt
         <p>{ title }</p>
       </span>
       <p className='description'>{ description }</p>
-      <Link className='purple_btn' href={`/curso/${url}`}>Acessar Curso</Link>
+      <div className='card_curse_botton'>
+        <Link className='purple_btn' href={`/curso/${url}`}>Acessar Curso</Link>
+        {purchased && 
+          <span>Comprado</span>
+        }
+        
+      </div>
     </div>
   )
 }

@@ -29,5 +29,19 @@
     margin: 20px 0 40px;
   }
 
-  
+  .card_curse_botton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      margin-right: 5%;
+      font-size: 14px;
+      background-color: var(--light-green);
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: var(--white);
+      font-weight: bold;
+    }
+  }
 }

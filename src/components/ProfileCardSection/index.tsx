@@ -18,7 +18,6 @@ export default function ProfileCardSection({ user, courseList }:ProfileCardSecti
     function checkList(){
       const purchasedCourses = courseList.filter(item => item.purchased)
       setPurchasedList(purchasedCourses)
-      console.log(purchasedCourses)
     }
     
     checkList()
@@ -29,7 +28,7 @@ export default function ProfileCardSection({ user, courseList }:ProfileCardSecti
 
       <div className='profile_cards'>
         {purchasedList.map((item) => (
-          <HomeCurseItem title={item.title} description={item.description} ico={item.ico} url={item.url} />
+          <HomeCurseItem key={item.id} title={item.title} description={item.description} ico={item.ico} url={item.url} />
         ))}
       </div>
     </section>
