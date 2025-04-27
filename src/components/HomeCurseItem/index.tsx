@@ -9,12 +9,13 @@ import { CurseProps } from '@/types/types'
 type HomeCurseItemProps = {
   title: String
   description: string
-  ico: StaticImageData
+  ico: StaticImageData,
+  url: string
 }
 
 import './style.scss'
 
-export default function HomeCurseItem({title, description, ico}:HomeCurseItemProps) {
+export default function HomeCurseItem({title, description, ico, url}:HomeCurseItemProps) {
   return (
     <div className='curse_card'>
       <span className='card_title'>
@@ -22,7 +23,7 @@ export default function HomeCurseItem({title, description, ico}:HomeCurseItemPro
         <p>{ title }</p>
       </span>
       <p className='description'>{ description }</p>
-      <Link href="#">Acessar Curso</Link>
+      <Link href={`/curso/${url}`}>Acessar Curso</Link>
     </div>
   )
 }

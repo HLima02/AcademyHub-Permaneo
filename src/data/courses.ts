@@ -11,7 +11,8 @@ export const cursos: CurseProps[] = [
     description: "Aprenda os fundamentos da programação utilizando Python, uma das linguagens mais populares e versáteis.",
     price: 49.99,
     created_at: "2023-01-15",
-    ico: python
+    ico: python,
+    url: '/introducao_programacao_python'
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export const cursos: CurseProps[] = [
     description: "Construa interfaces modernas e interativas para a web utilizando React e suas melhores práticas.",
     price: 69.99,
     created_at: "2023-02-10",
-    ico: react
+    ico: react,
+    url: '/desenvolvimento_web_react'
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ export const cursos: CurseProps[] = [
     description: "Aprofunde seus conhecimentos em JavaScript, abordando conceitos avançados e boas práticas.",
     price: 59.99,
     created_at: "2023-03-05",
-    ico: javascrit
+    ico: javascrit,
+    url: '/javascript_avancado'
   },
   {
     id: 4,
@@ -35,7 +38,8 @@ export const cursos: CurseProps[] = [
     description: "Crie aplicativos móveis para Android e iOS utilizando React Native e compartilhando código entre as plataformas.",
     price: 79.99,
     created_at: "2023-03-20",
-    ico: react
+    ico: react,
+    url: '/desenvolvimento_mobile_react_native'
   },
   {
     id: 5,
@@ -43,7 +47,8 @@ export const cursos: CurseProps[] = [
     description: "Aprenda a criar, consultar e gerenciar bancos de dados utilizando SQL.",
     price: 39.99,
     created_at: "2023-04-01",
-    ico: sql
+    ico: sql,
+    url: '/banco_de_dados_sql'
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ export const cursos: CurseProps[] = [
     description: "Entenda os fundamentos de DevOps e como implementar práticas de integração e entrega contínuas.",
     price: 89.99,
     created_at: "2023-04-15",
-    ico: python
+    ico: python,
+    url: '/devops_para_desenvolvedores'
   },
   {
     id: 7,
@@ -59,7 +65,8 @@ export const cursos: CurseProps[] = [
     description: "Construa APIs robustas e escaláveis utilizando Node.js e Express.",
     price: 54.99,
     created_at: "2023-05-10",
-    ico: javascrit
+    ico: javascrit,
+    url: '/desenvolvimento_apis_com_nodejs'
   },
   {
     id: 8,
@@ -67,7 +74,8 @@ export const cursos: CurseProps[] = [
     description: "Aprenda práticas e conceitos essenciais de segurança cibernética para proteger suas aplicações.",
     price: 74.99,
     created_at: "2023-05-25",
-    ico: python
+    ico: python,
+    url: '/ciberseguranca_para_desenvolvedore'
   },
   {
     id: 9,
@@ -75,7 +83,8 @@ export const cursos: CurseProps[] = [
     description: "Crie jogos incríveis utilizando Unity, uma das engines mais populares do mercado.",
     price: 99.99,
     created_at: "2023-06-05",
-    ico: python
+    ico: python,
+    url: '/desenvolvimento_jogos_unity'
   },
   {
     id: 10,
@@ -83,7 +92,8 @@ export const cursos: CurseProps[] = [
     description: "Introdução ao aprendizado de máquina utilizando bibliotecas como Scikit-Learn e TensorFlow.",
     price: 109.99,
     created_at: "2023-06-20",
-    ico: python
+    ico: python,
+    url: '/machine_learning_python'
   }
 ]
 

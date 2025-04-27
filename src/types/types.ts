@@ -18,7 +18,8 @@ export type CurseProps = {
   description: string
   price: number
   created_at: string,
-  ico: StaticImageData
+  ico: StaticImageData,
+  url: string
 }
 
 export type ContextValueProps = {

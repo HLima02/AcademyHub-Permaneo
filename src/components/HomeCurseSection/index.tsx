@@ -15,7 +15,7 @@ export default function HomeCurseSection() {
       <h2>Nossos cursos</h2>
       <div className='card_section'>
         {courseList.map(item => (
-          <HomeCurseItem key={item.id} title={item.title} description={item.description} ico={item.ico} />
+          <HomeCurseItem key={item.id} title={item.title} description={item.description} ico={item.ico} url={item.url} />
         )) }
       </div>
     </div>
