@@ -45,6 +45,11 @@
     .profile {
       color: var(--white);
       
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+
       &:hover{
         color: var(--light-pourple);
       }
@@ -55,13 +60,23 @@
 
   @media only screen and (max-width: 620px) {
     h1 {
-      font-size: 28px;
+      font-size: 26px;
     }
 
-    .btn_favorites {
-      a {
-        font-size: 13px;
-        padding: 6px 10px;
+    .header_btn {
+      .btn_favorites {
+        a {
+          font-size: 13px;
+          padding: 5px 8px;
+        }
+      }
+
+      .profile {
+        
+        svg {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }

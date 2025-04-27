@@ -13,7 +13,7 @@ export default function Header() {
         <span className='btn_favorites'>
           <Link href="#"><Heart /> Favoritos</Link>
         </span>
-        <Link className='profile' href="/profile"><CgProfile size={40} /></Link>
+        <Link className='profile' href="/profile"><CgProfile/></Link>
       </div>
     </header>
   )
