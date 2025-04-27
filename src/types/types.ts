@@ -1,3 +1,6 @@
+import { ReactNode } from 'react'
+import {StaticImageData } from 'next/image'
+
 export type UserCurses = {
   courseId: number
   dateJoined: string
@@ -14,7 +17,8 @@ export type CurseProps = {
   title: string
   description: string
   price: number
-  created_at: string
+  created_at: string,
+  ico: StaticImageData
 }
 
 export type ContextValueProps = {

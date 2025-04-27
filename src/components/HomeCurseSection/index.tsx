@@ -1,7 +1,8 @@
 'use client'
 import { useState, useContext } from 'react'
 import { UserContext } from '@/context/userContext'
-
+import HomeCurseItem from '@/components/HomeCurseItem'
+import './style.scss'
 
 export default function HomeCurseSection() {
   const context = useContext(UserContext)
@@ -10,8 +11,13 @@ export default function HomeCurseSection() {
 
   console.log(courseList)
   return (
-    <div>
-      <h2>Seção de cursos</h2>
+    <div className='Home_curses_container'>
+      <h2>Nossos cursos</h2>
+      <div className='card_section'>
+        {courseList.map(item => (
+          <HomeCurseItem key={item.id} title={item.title} description={item.description} ico={item.ico} />
+        )) }
+      </div>
     </div>
   )
 }
