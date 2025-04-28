@@ -13,7 +13,7 @@ export default function PlayerComponent({ url }: PlayerComponentProps) {
   const [playedCurse, setPlayedCurse] = useState<CurseProps>()
   const context = useContext(UserContext)
 
-  if(!context) return null
+  if(!context) return <div>Carregando...</div>
   const { courseList } = context
 
   useEffect(() => {

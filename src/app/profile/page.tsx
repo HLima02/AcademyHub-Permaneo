@@ -9,7 +9,7 @@ import './style.scss'
 
 export default function Profile() {
   const context = useContext(UserContext)
-  if(!context) return
+  if(!context) return <div>Carregando...</div>
   const { userLogged, courseList } = context
 
   return (

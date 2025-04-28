@@ -5,6 +5,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import Image from 'next/image'
 import Link from 'next/link'
 import { UserContext } from '@/context/userContext'
+import { toast } from 'react-toastify';
 import './style.scss'
 
 type FavoriteListProps = {
@@ -13,12 +14,13 @@ type FavoriteListProps = {
 
 export default function FavoriteList({ list }:FavoriteListProps ) {
   const context = useContext(UserContext)
-  if(!context) return
+  if(!context) return <div>Carregando...</div>
   const { favoriteList, setFavoriteList } = context
 
   function handleDeleteFavorite( id:number ){
     const auxlist = favoriteList.filter((item) => item.id !== id)
     setFavoriteList(auxlist)
+    toast.success('Curso removido da lista de favoritos!')
   }
 
   return (

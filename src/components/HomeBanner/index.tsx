@@ -1,11 +1,8 @@
 'use client'
-import {useState, useEffect} from 'react'
-
+import React, {useState, useEffect} from 'react'
 import './style.scss'
 
 export default function HomeBanner() {
-  
-
   return (
     <div className='homme_banner_container'>
       <div className='homme_banner_content'>

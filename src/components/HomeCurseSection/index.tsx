@@ -6,7 +6,7 @@ import './style.scss'
 
 export default function HomeCurseSection() {
   const context = useContext(UserContext)
-  if(!context) return
+  if(!context) return <div>Carregando...</div>
   const { courseList } = context
 
   return (

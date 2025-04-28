@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { ToastContainer } from 'react-toastify';
 import UserProvider from '@/context/userContext'
 import Header from '@/components/Header'
 import Footer from "@/components/Footer";
@@ -23,6 +23,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <ToastContainer />
         </UserProvider>
       </body>
     </html>

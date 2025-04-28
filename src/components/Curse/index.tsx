@@ -4,7 +4,7 @@ import { UserContext } from '@/context/userContext'
 import { CurseProps } from '@/types/types'
 import { CiHeart } from "react-icons/ci";
 import Image from 'next/image'
-
+import { toast } from 'react-toastify';
 import './style.scss'
 
 type CurseUrlProps = {
@@ -15,7 +15,7 @@ export default function Curse({ url }:CurseUrlProps) {
   const [curseItem, setCurseItem] = useState<CurseProps>([])
 
   const context = useContext(UserContext)
-  if(!context) return
+  if(!context) return <div>Carregando...</div>
   const { courseList, favoriteList, setFavoriteList } = context
 
   useEffect(() => {
@@ -33,11 +33,10 @@ export default function Curse({ url }:CurseUrlProps) {
     const hasCurse = favoriteList.some(item => item.id == curseItem.id)
     if (!hasCurse) {
       setFavoriteList((prevFavorites:CurseProps[]) => [...prevFavorites, curseItem])
-      alert('o item adicionado a lista')
+      toast.success('Curso adicionado aos favoritos!')
     } else {
-      alert('o item ja esta na lista')
+      toast.warning('Este curso já esta na lista de favoritos!')
     }
-    console.log(favoriteList)
   }
 
   return (
