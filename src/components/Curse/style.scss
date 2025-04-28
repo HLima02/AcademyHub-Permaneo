@@ -6,9 +6,29 @@
   justify-content: center;
 
   .curse_heading {
-    h2 {
-      font-size: 40px;
+    .title_favorite {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-size: 40px;
+      }
+  
+      .ico_favorite {
+        svg {
+          color: var(--dark-pourple);
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
+   
   }
 
   .curse_description {

@@ -11,7 +11,7 @@ export default function Header() {
       <Link href="/"><h1>AcademyHub </h1></Link>
       <div className='header_btn'>
         <span className='btn_favorites'>
-          <Link href="#"><Heart /> Favoritos</Link>
+          <Link href="/favorites"><Heart /> Favoritos</Link>
         </span>
         <Link className='profile' href="/profile"><CgProfile/></Link>
       </div>

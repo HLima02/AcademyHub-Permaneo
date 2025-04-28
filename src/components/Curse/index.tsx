@@ -2,6 +2,7 @@
 import {useState, useContext, useEffect} from 'react'
 import { UserContext } from '@/context/userContext'
 import { CurseProps } from '@/types/types'
+import { CiHeart } from "react-icons/ci";
 import Image from 'next/image'
 
 import './style.scss'
@@ -11,16 +12,15 @@ type CurseUrlProps = {
 }
 
 export default function Curse({ url }:CurseUrlProps) {
-  const [curseItem, setCurseItem] = useState<CurseProps | undefined>(undefined)
+  const [curseItem, setCurseItem] = useState<CurseProps>([])
 
   const context = useContext(UserContext)
   if(!context) return
-  const { courseList } = context
+  const { courseList, favoriteList, setFavoriteList } = context
 
   useEffect(() => {
     function loadCurse() {
-      console.log(courseList)
-      console.log(url)
+      console.log('Lista de favoritos: ', favoriteList)
       const item = courseList.find((curse) => curse.url == url)
       setCurseItem(item)
     }
@@ -28,12 +28,26 @@ export default function Curse({ url }:CurseUrlProps) {
     loadCurse()
   }, [])
 
+  function handleFavorite({item}:any){
+    console.log(favoriteList)
+    const hasCurse = favoriteList.some(item => item.id == curseItem.id)
+    if (!hasCurse) {
+      setFavoriteList((prevFavorites:CurseProps[]) => [...prevFavorites, curseItem])
+      alert('o item adicionado a lista')
+    } else {
+      alert('o item ja esta na lista')
+    }
+    console.log(favoriteList)
+  }
+
   return (
     <div className='curse_container'>
       <div className='curse_heading'>
         <Image src={curseItem?.ico} width={60} height={60} alt='logo python' />
-        <h2>{curseItem?.title}</h2> 
-        <span></span>
+        <div className='title_favorite'>
+          <h2>{curseItem?.title}</h2> 
+          <span className='ico_favorite' onClick={handleFavorite}><CiHeart /></span>
+        </div>
       </div>
       <p className='curse_description'>{curseItem?.description}</p>
       <div className='price_area'>

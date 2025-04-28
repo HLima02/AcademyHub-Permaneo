@@ -25,5 +25,7 @@ export type CurseProps = {
 
 export type ContextValueProps = {
   courseList: CurseProps[],
+  favoriteList: CurseProps[],
   userLogged: UserProps,
+  setFavoriteList: any
 }
