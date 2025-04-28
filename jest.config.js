@@ -1,15 +1,17 @@
 module.exports = {
-  preset: 'ts-jest', 
-  testEnvironment: 'jsdom', 
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1', 
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
+    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    // mapeie seus aliases se tiver
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest', 
-    '^.+\\.(js|jsx)$': 'babel-jest', 
-     '^.+\\.(css|scss)$': 'jest-transform-stub'
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'css', 'scss'], 
-  collectCoverage: true, 
-  coverageDirectory: './coverage', 
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node', 'scss'],
 };

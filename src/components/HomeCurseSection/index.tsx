@@ -1,5 +1,5 @@
 'use client'
-import { useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { UserContext } from '@/context/userContext'
 import HomeCurseItem from '@/components/HomeCurseItem'
 import './style.scss'

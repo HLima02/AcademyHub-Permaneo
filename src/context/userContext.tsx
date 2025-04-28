@@ -1,5 +1,6 @@
 'use client'
-import { useState, createContext, useContext, useEffect} from 'react'
+
+import React, { useState, createContext, useContext, useEffect} from 'react'
 import { cursos, user } from '@/data/courses'
 import { UserProps, CurseProps, ContextValueProps } from '@/types/types'
 import { json } from 'stream/consumers'

@@ -9,4 +9,11 @@ describe('HomeBanner Componente test', () => {
     const title = screen.getByText('Conhecimento que transforma vidas!')
     expect(title).toBeInTheDocument()
   })
+
+  it('Should render subtitle correctly', () => {
+    render(<HomeBanner />)
+
+    const subTitle = screen.getByText('Cursos com certificação e conexão direta com o mercado, feitos por quem entende do mercado!')
+    expect(subTitle).toBeInTheDocument()
+  })
 })
