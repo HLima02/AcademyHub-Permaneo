@@ -5,19 +5,20 @@ import { CurseProps } from '@/types/types'
 
 import './style.scss'
 
+// Define as propriedades que o componente espera receber
 type PlayerComponentProps = {
   url: string
 }
 
 export default function PlayerComponent({ url }: PlayerComponentProps) {
-  const [playedCurse, setPlayedCurse] = useState<CurseProps>()
-  const context = useContext(UserContext)
-
-  if(!context) return <div>Carregando...</div>
-  const { courseList } = context
+  const [playedCurse, setPlayedCurse] = useState<CurseProps>()                //Estado para armazenar o curso carregado
+  
+  const context = useContext(UserContext)                                     //Obtem o contexto com a lista de curso e dados usuario
+  if(!context) return <div>Carregando...</div>                                //Caso o contexto ainda esteja vazio, retorna uma frase
+  const { courseList } = context                                              //destruturing do contexto
 
   useEffect(() => {
-    let auxList = courseList.find((item) => item.url == `/${url}`)
+    let auxList = courseList.find((item) => item.url == `/${url}`)            //Busca o curso correspondente pela URL
     setPlayedCurse(auxList)
   }, [])
 

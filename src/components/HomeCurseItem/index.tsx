@@ -2,10 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import image from '../../assets/python_5968350.png'
 import {StaticImageData } from 'next/image'
-import { CurseProps } from '@/types/types'
 
+//Define as props esperadas pelo componente
 type HomeCurseItemProps = {
   title: String
   description: string

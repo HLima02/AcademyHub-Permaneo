@@ -7,11 +7,9 @@ import Link from 'next/link'
 import './style.scss'
 
 export default function FavotesPage() {
-  const context = useContext(UserContext)
-  if(!context) return <div>Carregando...</div>
-  const { favoriteList } = context
-
-  console.log(favoriteList)
+  const context = useContext(UserContext)             //Obtem o contexto com a lista de curso e dados usuario
+  if(!context) return <div>Carregando...</div>        //Caso o contexto ainda esteja vazio, retorna uma frase
+  const { favoriteList } = context                    //destruturing do contexto
 
   return (
     <div className='favorite_container'>

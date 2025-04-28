@@ -7,20 +7,21 @@ import Image from 'next/image'
 import { toast } from 'react-toastify';
 import './style.scss'
 
+// Define as propriedades que o componente espera receber
 type CurseUrlProps = {
   url: string
 }
 
 export default function Curse({ url }:CurseUrlProps) {
-  const [curseItem, setCurseItem] = useState<CurseProps>([])
+  const [curseItem, setCurseItem] = useState<CurseProps>([])    //Estado para armazenar o curso carregado
 
-  const context = useContext(UserContext)
-  if(!context) return <div>Carregando...</div>
-  const { courseList, favoriteList, setFavoriteList } = context
+  const context = useContext(UserContext)                       //Obtem o contexto com a lista de curso e dados usuario
+  if(!context) return <div>Carregando...</div>                  //Caso o contexto ainda esteja vazio, retorna uma frase
+  const { courseList, favoriteList, setFavoriteList } = context //destruturing do contexto
 
   useEffect(() => {
+    // Função para carregar o curso baseado na URL recebida
     function loadCurse() {
-      console.log('Lista de favoritos: ', favoriteList)
       const item = courseList.find((curse) => curse.url == url)
       setCurseItem(item)
     }
@@ -28,9 +29,10 @@ export default function Curse({ url }:CurseUrlProps) {
     loadCurse()
   }, [])
 
+  // Função para adicionar o curso aos favoritos
   function handleFavorite({item}:any){
     console.log(favoriteList)
-    const hasCurse = favoriteList.some(item => item.id == curseItem.id)
+    const hasCurse = favoriteList.some(item => item.id == curseItem.id)                 //Verifica se o curso já existe na lista
     if (!hasCurse) {
       setFavoriteList((prevFavorites:CurseProps[]) => [...prevFavorites, curseItem])
       toast.success('Curso adicionado aos favoritos!')

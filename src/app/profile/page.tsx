@@ -8,9 +8,9 @@ import { CurseProps } from '@/types/types'
 import './style.scss'
 
 export default function Profile() {
-  const context = useContext(UserContext)
-  if(!context) return <div>Carregando...</div>
-  const { userLogged, courseList } = context
+  const context = useContext(UserContext)             //Obtem o contexto com a lista de curso e dados usuario
+  if(!context) return <div>Carregando...</div>        //Caso o contexto ainda esteja vazio, retorna uma frase
+  const { userLogged, courseList } = context          //destruturing do contexto
 
   return (
     <div className='profile_container'>
