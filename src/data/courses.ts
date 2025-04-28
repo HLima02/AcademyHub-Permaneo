@@ -1,3 +1,4 @@
+import React from 'react'
 import { CurseProps } from '@/types/types'
 import python from '../assets/python_5968350.png'
 import react from '../assets/atom_9791305.png'

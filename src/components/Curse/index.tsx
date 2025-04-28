@@ -1,5 +1,5 @@
 'use client'
-import {useState, useContext, useEffect} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import { UserContext } from '@/context/userContext'
 import { CurseProps } from '@/types/types'
 import { CiHeart } from "react-icons/ci";

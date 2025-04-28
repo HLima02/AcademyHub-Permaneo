@@ -1,5 +1,5 @@
 'use client'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { CurseProps } from '@/types/types'
 import { FaRegTrashAlt } from "react-icons/fa";
 import Image from 'next/image'

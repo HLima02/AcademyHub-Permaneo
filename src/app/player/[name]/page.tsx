@@ -1,3 +1,4 @@
+import React from 'react'
 import PlayerComponent from '@/components/Player'
 import './style.scss'
 

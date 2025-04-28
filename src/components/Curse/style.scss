@@ -59,4 +59,49 @@
       padding: 15px 20px;
     }
   }
+
+  @media only screen and (max-width: 610px){
+    .curse_heading {
+      .title_favorite {
+        h2 {
+          font-size: 25px;
+        }
+
+        .ico_favorite {
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .curse_description {
+      font-size: 20px;
+    }
+
+    .price_area {
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .price {
+        .value {
+          font-size: 30px;
+          font-weight: bold;
+  
+        }
+        .date {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .price_btn {
+      a {
+        font-size: 18px;
+        padding: 10px 15px;
+      }
+    }
+  }
 }

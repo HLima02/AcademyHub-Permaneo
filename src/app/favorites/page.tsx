@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from '@/context/userContext'
 import FavoriteList from '@/components/FavoriteList'
 import Link from 'next/link'

@@ -1,5 +1,5 @@
 'use client'
-import { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import Image from 'next/image'
 import profile from '@/assets/profile.png'
 import ProfileCardSection from '@/components/ProfileCardSection'

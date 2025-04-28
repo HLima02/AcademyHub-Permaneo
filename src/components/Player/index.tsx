@@ -1,5 +1,5 @@
 'use client'
-import { useState, useContext, useEffect} from 'react'
+import React, { useState, useContext, useEffect} from 'react'
 import { UserContext } from '@/context/userContext'
 import { CurseProps } from '@/types/types'
 
@@ -30,7 +30,7 @@ export default function PlayerComponent({ url }: PlayerComponentProps) {
           Seu navegador não suporta a tag de vídeo.
         </video>
 
-        <div className='btn_area'>
+        <div className='btn_area_player'>
           <button className='purple_btn'>Continuar curso</button>
           <button className='purple_btn'>Reiniciar curso</button>
         </div>

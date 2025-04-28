@@ -1,3 +1,4 @@
+import React from 'react'
 import Curse from '@/components/Curse'
 
 type CursePageProps = {

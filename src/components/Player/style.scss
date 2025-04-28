@@ -2,14 +2,25 @@
   width: 100%;
   text-align: center;
 
-  .btn_area{
+  .btn_area_player{
     width: 100%;
     margin: 40px 0;
+    display: flex;
+    justify-content: center;
     button {
       border: none;
       margin: 0 30px;
       font-size: 22px;
     }
   }
- 
+  
+  @media only screen and (max-width: 560px){
+    .btn_area_player{
+      button {
+        border: none;
+        margin: 0 15px;
+        font-size: 15px;
+      }
+    }
+  }
 }
