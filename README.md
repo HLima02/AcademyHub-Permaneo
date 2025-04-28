@@ -29,4 +29,6 @@ Este projeto foi desenvolvido como parte de um teste técnico para o Grupo Perma
 ### 3. Inicie o servidor de desenvolvimento
   npm run dev
 
-
+## Publicação
+o projeto esta publicado no link abaixo:
+https://academy-hub-permaneo.vercel.app/
