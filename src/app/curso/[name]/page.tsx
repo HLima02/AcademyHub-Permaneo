@@ -1,14 +1,18 @@
 import React from 'react'
 import Curse from '@/components/Curse'
+import { notFound } from 'next/navigation'
 
-type CursePageProps = {
+interface CursePageProps {
   params: {
     name: string
   }
 }
 
-export default function CursePage({ params }:CursePageProps ) {
+const CursePage = async({ params }: CursePageProps) => {
   const { name } = params
+  if (!name) {
+    notFound() 
+  }
 
   return (
     <div>
@@ -16,3 +20,5 @@ export default function CursePage({ params }:CursePageProps ) {
     </div>
   )
 }
+
+export default CursePage
