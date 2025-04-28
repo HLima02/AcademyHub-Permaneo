@@ -26,7 +26,7 @@ export default function HomeCurseItem({title, description, ico, url, purchased}:
       </span>
       <p className='description'>{ description }</p>
       <div className='card_curse_botton'>
-        <Link className='purple_btn' href={`/curso/${url}`}>Acessar Curso</Link>
+        <Link className='purple_btn'  href={ purchased ? `/player/${url}` : `/curso/${url}`}>Acessar Curso</Link>
         {purchased && 
           <span>Comprado</span>
         }

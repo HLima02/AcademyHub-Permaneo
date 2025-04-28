@@ -1,4 +1,3 @@
-import React from 'react'
 import Curse from '@/components/Curse'
 
 type CursePageProps = {
@@ -9,10 +8,9 @@ type CursePageProps = {
 
 export default function CursePage({ params }:CursePageProps ) {
   const { name } = params
-  console.log(name)
+
   return (
     <div>
-
       <Curse url={`/${name}`} />
     </div>
   )
